@@ -7,7 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="body-container">
+        <header class="header-container">
+            <h1 class="main-header">Резюме студента</h1>
+            <nav class="navigation-container">
+                <button class="nav-btn" id="aboutBtn">О себе</button>
+                <button class="nav-btn" id="skillsBtn">Навыки</button>
+                <button class="nav-btn" id="graduationBtn">Образование</button>
+                <button class="nav-btn" id="softskillsBtn">Личные качества</button>        </nav>
+        </header>
+        <main class="main-container">
+            <section class="info-section" id="aboutSection">
+                <label for="nameAbtInput" class="input-label">ФИО</label>
+                <input type="text" class="info-input" id="nameAbtInput" placeholder="Фамилия, имя, отчество">
+                <label for="cityAbtInput" class="input-label">Город</label>
+                <input type="text" class="info-input" id="cityAbtInput" placeholder="Введите город">
+            </section>
+            <section class="skills-section" id="skillsSection">
+                <button class="skills-select">HTML</button>
+            </section>
+            <section class="info-section" id="graduationSection">
+                <label for="nameGradInput" class="input-label">Наименование образовательного учреждения</label>
+                <input type="text" class="info-input" id="nameGradInput" placeholder="Введите наименование">
+                <label for="cityGradInput" class="input-label">Город образовательного учреждения</label>
+                <input type="text" class="info-input" id="cityGradInput" placeholder="Город образовательного учреждения">
+            </section>
+            <section class="info-section" id="softskillsSection">
+                <label for="soflskillsTextarea" class="input-label">Укажите свои личные качества через запятую</label>
+                <textarea id="softskillsTextarea" placeholder="Ваши личные качества"></textarea>
+            </section>
+            <section class="info-section" id="aboutSection">
+                <p id="fullNameText">Иванов Иван Иванович</p>
+                <h4 class="final-header">Город:</h4>
+                <p class="final-text" id="finalCity">Москва</p>
+                <h4 class="final-header">Образование:</h4>
+                <p class="final-text" id="finalGradName">МГТУ</p>
+                <h4 class="final-header">Город получения образования:</h4>
+                <p class="final-text" id="finalGradCity">Москва</p>
+                <h4 class="final-header">Навыки:</h4>
+                <ul class="final-list">
+                    <li class="final-item skill-item">HTML</li>
+                </ul>
+                <h4 class="final-header">Личные качества:</h4>
+                <ul class="final-list">
+                    <li class="final-item softskills-item">Стрессоустойчивость</li>
+                </ul>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

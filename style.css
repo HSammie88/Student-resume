@@ -1,5 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url("./src/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: "Roboto Slab", sans-serif;
+}
+.body-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    min-height: 30%;
+    height: auto;
+    background-color: rgba(49, 48, 48, 0.747);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 40px 0 0 0;
+}
+.header-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+}
+.main-header{
+    font-weight: 900;
+    font-size: 35px;
+    padding: 10px;
+}
+.navigation-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+.nav-btn{
+    height: 4rem;
+    width: 200px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.nav-btn:hover{
+    border-bottom: 1px solid rgb(99, 97, 97);
+    cursor: pointer;
 }
