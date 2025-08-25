@@ -99,17 +99,20 @@ body{
     background-color: black;
     color: white;
     border: none;
-}
-.nav-btn:hover{
-    border-bottom: 1px solid rgb(99, 97, 97);
     cursor: pointer;
+}
+#resumeBtn{
+    cursor:not-allowed;
 }
 .main-container{
     margin-top: 170px;
+    width: 100%;
+    min-height: 300px;
 }
 .info-section{
     padding: 20px;
     font-size: 40px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .input-label{
     font-weight: 600;
