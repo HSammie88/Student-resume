@@ -1,4 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+:root{
+    --buttons-font-size: 0;
+    --buttons-width: 0;
+    --headers-font-size: 0;
+    --li-font-size: 0;
+    --text-font-size: 0;
+}
+@media (max-width: 768px){
+    :root{
+        --buttons-font-size: 15px;
+        --buttons-width: 200px;
+        --headers-font-size: 20px;
+        --li-font-size: 15px;
+        --text-font-size: 15px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    :root{
+        --buttons-font-size: 20px;
+        --buttons-width: 300px;
+        --headers-font-size: 30px;
+        --li-font-size: 25px;
+        --text-font-size: 25px;
+    }
+}
+@media (min-width: 1025px){
+    :root{
+        --buttons-font-size: 25px;
+        --buttons-width: 400px;
+        --headers-font-size: 35px;
+        --li-font-size: 30px;
+        --text-font-size: 30px;
+    }
+}
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +59,6 @@ body{
     align-items: center;
     flex-direction: column;
     width: 90%;
-    min-height: 30%;
     height: auto;
     background-color: rgba(49, 48, 48, 0.747);
     backdrop-filter: blur(10px);
@@ -59,9 +92,10 @@ body{
 }
 .nav-btn{
     height: 4rem;
-    width: 200px;
+    width: var(--buttons-width);
+    margin: 0 10px;
     font-family: "Roboto Slab", sans-serif;
-    font-size: 20px;
+    font-size: var(--buttons-font-size);
     background-color: black;
     color: white;
     border: none;
@@ -69,4 +103,71 @@ body{
 .nav-btn:hover{
     border-bottom: 1px solid rgb(99, 97, 97);
     cursor: pointer;
+}
+.main-container{
+    margin-top: 170px;
+}
+.info-section{
+    padding: 20px;
+    font-size: 40px;
+}
+.input-label{
+    font-weight: 600;
+    font-size: var(--headers-font-size);
+}
+#aboutSection{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.info-input, textarea{
+    width: 100%;
+    height: 3rem;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px white solid;
+    background-color: black;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    resize: none;
+    color: white;
+    font-family: "Roboto Slab", sans-serif;
+}
+#skillsSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.skills-select{
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+.skills-select:hover{
+    background-color: white;
+    color: black;
+}
+textarea{
+    height: 10rem;
+}
+.info-section h4{
+    font-size: var(--headers-font-size);
+}
+.info-section p{
+    font-size: var(--text-font-size);
+    margin: 20px;
+}
+.final-item{
+    font-size: var(--li-font-size);
+    margin: 20px 0 20px 50px;
 }
