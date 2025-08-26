@@ -1,29 +1,6 @@
 import {russianCities} from "./src/cities.js"
 import {skillsList} from "./src/skills.js"
 
-class Person{
-    constructor(name, city, softskills, skillsList){
-        this.name = name
-        this.city = city
-        this.softskills = softskills.split(', ')
-        this.skillsList = skillsList
-    }
-}
-
-class Education{
-    constructor(name, city){
-        this.name = name
-        this.city = city
-    }
-}
-
-class FinalForm{
-    constructor(person, education){
-        this.person = person
-        this.education = education
-    }
-}
-
 class FormController{
     constructor(){
         this.navButtons = document.querySelectorAll(".nav-btn")
