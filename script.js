@@ -20,6 +20,7 @@ class FormController{
         this.setupSections(0)
         this.setupSkillsButtons()
         this.setupInputs()
+        this.setupCityAutocomplete()
         this.resumeButton.addEventListener('focus', ()=>{
             document.getElementById('nameResumeText').innerHTML = this.inputAreas[0].value
             this.lists[0].innerHTML = ''
@@ -131,6 +132,39 @@ class FormController{
         else{
             this.lists[1].appendChild(li)
         }
+    }
+    setupCityAutocomplete() {
+        const cityInputs = [this.inputAreas[1], this.inputAreas[2]]
+        cityInputs.forEach(input => {
+            const datalist = document.createElement('datalist')
+            datalist.id = `cities-${input.dataset.index}`
+            input.setAttribute('list', datalist.id)
+            input.parentNode.appendChild(datalist)
+    
+            input.addEventListener('input', () => {
+                const value = input.value.toLowerCase()
+                
+                if (value.length > 1) {
+                    const filteredCities = russianCities.filter(city => 
+                        city.toLowerCase().includes(value)
+                    )
+                    
+                    datalist.innerHTML = ''
+                    filteredCities.forEach(city => {
+                        const option = document.createElement('option')
+                        option.value = city
+                        datalist.appendChild(option)
+                    })
+                } else {
+                    datalist.innerHTML = ''
+                }
+            })
+            input.addEventListener('blur', () => {
+                if (!russianCities.includes(input.value)) {
+                    input.value = ''
+                }
+            })
+        })
     }
 }
 
