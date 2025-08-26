@@ -51,6 +51,7 @@ body{
     justify-content: start;
     align-items: center;
     font-family: "Roboto Slab", sans-serif;
+    overflow: hidden;
 }
 .body-container{
     position: relative;
